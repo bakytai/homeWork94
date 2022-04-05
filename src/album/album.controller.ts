@@ -23,7 +23,7 @@ export class AlbumController {
   @Get()
   getAll(@Query() artist: string) {
     if (artist) {
-      return this.albumModel.find({ _id: artist });
+      return this.albumModel.find({ artist: artist });
     }
     return this.albumModel.find();
   }

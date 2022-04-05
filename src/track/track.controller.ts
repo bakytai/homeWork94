@@ -13,7 +13,7 @@ export class TrackController {
   @Get()
   getAll(@Query() album: string) {
     if (album) {
-      return this.trackModel.find({ _id: album });
+      return this.trackModel.find({ album: album });
     }
     return this.trackModel.find();
   }
